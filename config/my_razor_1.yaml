@@ -1,0 +1,36 @@
+#razor m0 no.1
+## USB port
+port: /dev/ttyACM0
+topic: imu/data_raw
+frame_id: base_imu_link
+
+##### Calibration ####
+### accelerometer
+accel_x_min: -250.0
+accel_x_max: 246.2
+accel_y_min: -245.0
+accel_y_max: 255.09
+accel_z_min: -261.62
+accel_z_max: 245.07
+
+### magnetometer
+# standard calibration
+magn_x_min: -337.03
+magn_x_max: 430.16
+magn_y_min: 165.01
+magn_y_max: 925.7
+magn_z_min: -810.65
+magn_z_max: -46.04
+
+# extended calibration
+calibration_magn_use_extended: false
+magn_ellipsoid_center: [0, 0, 0]
+magn_ellipsoid_transform: [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+
+# AHRS to robot calibration
+imu_yaw_calibration: 0.0
+
+### gyroscope
+gyro_average_offset_x: -0.02
+gyro_average_offset_y: -0.05
+gyro_average_offset_z: 0.02
